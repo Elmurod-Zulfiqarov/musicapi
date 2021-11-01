@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunSQL('CREATE EXTENSION pg_trgm'),
+        migrations.RunSQL('CREATE EXTENSION IF NOT EXISTS pg_trgm'),
         migrations.CreateModel(
             name='Album',
             fields=[
